@@ -1,2 +1,1 @@
-# abhpan007.github.io
-Abhigyan Pandya's Github Page
+# Abhigyan Pandya's Github Page
