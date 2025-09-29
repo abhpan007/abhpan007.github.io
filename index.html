@@ -1,74 +1,56 @@
 <!doctype html>
-<link rel="stylesheet" href="assets/style.css">
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Abhigyan Pandya</title>
 
-<a href="https://linktr.ee/abhigyan" target="_blank" rel="noopener">Linktree</a>
-</nav>
-</header>
+  <!-- Global styles -->
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="icon" href="favicon.ico" />
 
-<main class="container wrap">
-<aside class="sidebar">
-<img class="pfp" src="/assets/profile.jpg" alt="Abhigyan Pandya" />
-<div>
-<h1 class="name">Abhigyan Pandya</h1>
-<div class="mono">MSBA @ UT Austin · Analytics & Product</div>
-</div>
-<div class="slinks">
-<a href="mailto:abhigyanpandya@gmail.com">abhigyanpandya@gmail.com</a>
-<a href="https://github.com/abhipan007" target="_blank" rel="noopener">github</a>
-<a href="https://www.linkedin.com/in/abhigyan-pandya/" target="_blank" rel="noopener">linkedin</a>
-<a href="https://x.com/" target="_blank" rel="noopener">twitter</a>
-</div>
-</aside>
+  <!-- Layout overrides for the sidebar style -->
+  <style>
+    .wrap{display:grid; grid-template-columns:280px 1fr; gap:32px; align-items:start; padding:32px 0}
+    .sidebar{position:sticky; top:24px; display:grid; gap:18px}
+    .pfp{width:100%; border-radius:24px; border:1px solid #1e2430}
+    .name{font-size:1.9rem; font-weight:800; margin:0}
+    .mono{color:var(--muted); font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace}
+    .slinks{display:grid; gap:8px}
+    .slinks a{color:var(--muted); text-decoration:none}
+    .slinks a:hover{color:var(--ink)}
+    .content{display:grid; gap:28px}
+    .kicker{color:var(--muted)}
+    .pubs{display:grid; gap:12px}
+    .pubs a{color:var(--ink)}
+    @media (max-width:860px){ .wrap{grid-template-columns:1fr} .sidebar{position:static} }
+  </style>
+</head>
+<body>
+  <header class="topbar container">
+    <a class="logo" href="/">AP</a>
+    <nav class="nav">
+      <a href="/projects.html">Projects</a>
+      <a href="/resume.html">Résumé</a>
+      <a href="https://linktr.ee/abhigyan" target="_blank" rel="noopener">Linktree</a>
+    </nav>
+  </header>
 
+  <main class="container wrap">
+    <aside class="sidebar">
+      <img class="pfp" src="/assets/profile.jpg" alt="Abhigyan Pandya" />
+      <div>
+        <h1 class="name">Abhigyan Pandya</h1>
+        <div class="mono">MSBA @ UT Austin · Analytics & Product</div>
+      </div>
+      <div class="slinks">
+        <a href="mailto:abhigyanpandya@gmail.com">Email: abhigyanpandya@gmail.com</a>
+        <a href="https://github.com/abhipan007" target="_blank" rel="noopener">github</a>
+        <a href="https://www.linkedin.com/in/abhigyan-pandya/" target="_blank" rel="noopener">linkedin</a>
+      </div>
+    </aside>
 
-<section class="content">
-<section>
-<p class="lede">Hey! I'm an analytics‑minded builder focused on turning messy, real‑world data into decisions. I care about simple models that ship, clear measurement, and clean interfaces for non‑technical stakeholders.</p>
-<p>Recently: unstructured data analytics, CVaR portfolio optimization, a BeerAdvocate review scraper at scale, and an AI travel recommender. I'm especially interested in reasoning‑friendly interfaces for data products.</p>
-</section>
-
-
-<section>
-<h2>News</h2>
-<div class="grid" style="grid-template-columns:1fr; gap:10px">
-<div><b>[Aug 2025]</b> Led a senior‑care consulting tool from paper workflows → automated PDF → Spark pipeline.</div>
-<div><b>[May 2025]</b> Deep dive on mini‑batch SGD tradeoffs for class notes.</div>
-</div>
-</section>
-
-
-<section>
-<h2>Selected Projects</h2>
-<div id="featured-grid" class="grid"></div>
-</section>
-
-
-<section>
-<h2>Preprints & Write‑ups</h2>
-<div class="pubs">
-<!-- Replace links with real posts/papers when ready -->
-<a href="#">Long‑form: CVaR portfolio optimization notes</a>
-<a href="#">Case study: scraping 30k beer reviews responsibly</a>
-<a href="#">Notes: momentum for faster, stabler convergence</a>
-</div>
-</section>
-
-
-</section>
-</main>
-
-
-<footer class="container footer">
-<span>© <span id="year"></span> Abhigyan Pandya</span>
-<span class="kicker"><a href="/projects.html">Projects</a> · <a href="/resume.html">Résumé</a> · <a href="" target="_blank" rel="noopener">Personal domain</a></span>
-</footer>
-
-
-<script>window.SITE_CFG = { username: "abhipan007", featured: [] };</script>
-<script src="assets/site.js"></script>
-<script>
-document.getElementById('year').textContent = new Date().getFullYear();
-renderFeatured("featured-grid");
-</script>
-</body>
-</html>
+    <section class="content">
+      <section>
+        <p class="lede">Hey! I'm an analytics-minded builder focused on turning messy, real-world data into decisions. I care about simple models that ship, clear measurement, and clean interfaces for non-technical stakeholders.</p>
+        <p>Recently: unstructured data analytics, CVaR portfolio optimization, a BeerAdvocate review scraper at scale, and an
