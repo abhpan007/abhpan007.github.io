@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>All Projects – Abhigyan Pandya</title>
+<meta name="description" content="All public GitHub repositories by Abhigyan Pandya." />
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<header class="topbar container">
+<a class="logo" href="/">AP</a>
+<nav class="nav">
+<a class="active" href="/projects.html">Projects</a>
+<a href="https://www.linkedin.com/in/abhigyan-pandya/" target="_blank" rel="noopener">LinkedIn</a>
+<a href="https://linktr.ee/abhigyan" target="_blank" rel="noopener">Linktree</a>
+</nav>
+</header>
+
+
+<main class="container">
+<section class="pagehead">
+<h1>All Projects</h1>
+<input id="search" class="search" type="search" placeholder="Search projects… (name, topics, description)" />
+</section>
+
+
+<div id="repo-grid" class="grid"></div>
+<div id="empty" class="empty" hidden>No matches. Try a different search.</div>
+</main>
+
+
+<footer class="container footer">
+<span>© <span id="year"></span> Abhigyan Pandya</span>
+</footer>
+
+
+<script>window.SITE_CFG = { username: "abhipan007" };</script>
+<script src="assets/site.js"></script>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+loadAndRenderRepos({
+gridId: 'repo-grid',
+emptyId: 'empty',
+searchId: 'search',
+hide: {
+forks: true,
+archived: true,
+pagesRepo: true
+}
+});
+</script>
+</body>
+</html>
