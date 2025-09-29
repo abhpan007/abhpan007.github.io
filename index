@@ -1,59 +1,71 @@
 <!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Abhigyan Pandya – Portfolio</title>
-<meta name="description" content="Analytics, product, and data science projects by Abhigyan Pandya." />
-<link rel="stylesheet" href="assets/style.css" />
-<link rel="icon" href="favicon.ico" />
-</head>
-<body>
-<header class="topbar container">
-<a class="logo" href="/">AP</a>
-<nav class="nav">
-<a href="/projects.html">Projects</a>
-<a href="https://www.linkedin.com/in/abhigyan-pandya/" target="_blank" rel="noopener">LinkedIn</a>
 <a href="https://linktr.ee/abhigyan" target="_blank" rel="noopener">Linktree</a>
 </nav>
 </header>
 
 
-<main class="container">
-<section class="hero">
-<h1>Hi, I'm <span class="accent">Abhigyan Pandya</span>.</h1>
-<p class="lede">MSBA @ UT Austin → turning messy data into clear stories. I build practical analytics, ML, and product experiments with global impact.</p>
-<div class="cta">
-<a class="btn" href="/projects.html">Browse all projects</a>
-<a class="btn ghost" href="https://www.linkedin.com/in/abhigyan-pandya/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+<main class="container wrap">
+<aside class="sidebar">
+<img class="pfp" src="/assets/profile.jpg" alt="Abhigyan Pandya" />
+<div>
+<h1 class="name">Abhigyan Pandya</h1>
+<div class="mono">MSBA @ UT Austin · Analytics & Product</div>
+</div>
+<div class="slinks">
+<a href="mailto:youremail@domain.com">youremail@domain.com</a>
+<a href="https://scholar.google.com/" target="_blank" rel="noopener">google scholar</a>
+<a href="https://github.com/abhipan007" target="_blank" rel="noopener">github</a>
+<a href="https://www.linkedin.com/in/abhigyan-pandya/" target="_blank" rel="noopener">linkedin</a>
+<a href="https://x.com/" target="_blank" rel="noopener">twitter</a>
+</div>
+</aside>
+
+
+<section class="content">
+<section>
+<p class="lede">Hey! I'm an analytics‑minded builder focused on turning messy, real‑world data into decisions. I care about simple models that ship, clear measurement, and clean interfaces for non‑technical stakeholders.</p>
+<p>Recently: unstructured data analytics, CVaR portfolio optimization, a BeerAdvocate review scraper at scale, and an AI travel recommender. I'm especially interested in reasoning‑friendly interfaces for data products.</p>
+</section>
+
+
+<section>
+<h2>News</h2>
+<div class="grid" style="grid-template-columns:1fr; gap:10px">
+<div><b>[Sep 2025]</b> Portfolio site refresh + public write‑ups are rolling out.</div>
+<div><b>[Aug 2025]</b> Led a senior‑care consulting tool from paper workflows → automated PDF → Spark pipeline.</div>
+<div><b>[May 2025]</b> Deep dive on mini‑batch SGD tradeoffs for class notes.</div>
 </div>
 </section>
 
 
 <section>
-<h2>Featured Work</h2>
+<h2>Selected Projects</h2>
 <div id="featured-grid" class="grid"></div>
 </section>
 
 
 <section>
-<h2>About</h2>
-<p>I like fast feedback loops: ship something small, measure, iterate. You'll find write‑ups, notebooks, and small tools here—from Selenium scrapers
-and CVaR optimization to unstructured data analytics and lightweight data products.</p>
+<h2>Preprints & Write‑ups</h2>
+<div class="pubs">
+<!-- Replace links with real posts/papers when ready -->
+<a href="#">Long‑form: CVaR portfolio optimization notes</a>
+<a href="#">Case study: scraping 30k beer reviews responsibly</a>
+<a href="#">Notes: momentum for faster, stabler convergence</a>
+</div>
+</section>
+
+
 </section>
 </main>
 
 
 <footer class="container footer">
 <span>© <span id="year"></span> Abhigyan Pandya</span>
-<span><a href="/projects.html">Projects</a> · <a href="https://linktr.ee/abhigyan" target="_blank" rel="noopener">Linktree</a></span>
+<span class="kicker"><a href="/projects.html">Projects</a> · <a href="/resume.html">Résumé</a> · <a href="https://abhigyan.dev" target="_blank" rel="noopener">Personal domain</a></span>
 </footer>
 
 
-<script>window.SITE_CFG = { username: "abhipan007", featured: [
-// Add repo slugs to feature them on the home page:
-// "BeerAdvocate-Review-Scraper", "CVaR-Portfolio-Optimization", "AI-Travel-Recommender"
-]};</script>
+<script>window.SITE_CFG = { username: "abhipan007", featured: [] };</script>
 <script src="assets/site.js"></script>
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
