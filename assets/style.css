@@ -55,8 +55,8 @@ h2{ margin:40px 0 14px; font-size:1.4rem }
 /* Headshot sizing/crop */
 .pfp {
   width: 100%;
-  max-width: 240px;     /* cap the size */
-  aspect-ratio: 4 / 5;  /* portrait shape */
+  max-width: 220px;     /* cap the size */
+  aspect-ratio: 1 / 1;  /* portrait shape */
   object-fit: cover;    /* crop instead of squish */
   object-position: 50% 50%; /* adjust if your face is off-center */
   border-radius: 20px;
