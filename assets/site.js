@@ -25,11 +25,12 @@ function repoCard(r){
   var lang = r.language ? '<span class="lang">' + r.language + '</span>' : '';
   var stars = r.stargazers_count ? '★ ' + r.stargazers_count : '';
   var topics = (r.topics || []).slice(0, 5).map(function(t){ return '<span class="badge">' + t + '</span>'; }).join('');
-  return el('<a class="card" href="' + (r.html_url || '#') + '" target="_blank" rel="noopener">' +
+  return el('<a class="card card-project" href="' + (r.html_url || '#') + '" target="_blank" rel="noopener">' +
+'<div class="card-strip"></div>' +
 '<h3>'+ (r.name||'') +'</h3>' +
 '<p>'+ (desc||'') +'</p>' +
 '<div class="meta">' + lang + '<span>'+ stars +'</span><span>Updated '+ relTime(r.updated_at) +'</span></div>' +
-'<div style="margin-top:10px; display:flex; gap:6px; flex-wrap:wrap">'+ topics +'</div></a>');
+'<div class="card-tags">'+ topics +'</div></a>');
 }
 
 

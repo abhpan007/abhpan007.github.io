@@ -22,78 +22,114 @@
   <meta name="twitter:card" content="summary_large_image" />
 </head>
 <body>
-  <div class="bg-dynamic" aria-hidden="true"></div>
+  <div class="bg-dynamic" id="bg-dynamic" aria-hidden="true"></div>
 
   <header class="topbar container" id="topbar">
-    <a class="logo" href="/">AP</a>
-    <nav class="nav">
-      <a href="#experience">Work</a>
-      <a href="#education">Education</a>
-      <a href="/projects.html">Projects</a>
-      <a href="/resume.html">Résumé</a>
-      <a href="https://www.linkedin.com/in/abhi-pandya" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <div class="topbar-pill">
+      <a class="logo" href="/">AP</a>
+      <nav class="nav">
+        <a href="#experience">Work</a>
+        <a href="#education">Education</a>
+        <a href="/projects.html">Projects</a>
+        <a href="/resume.html">Résumé</a>
+        <a href="https://www.linkedin.com/in/abhi-pandya" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="nav-icon nav-icon-github" href="https://github.com/abhpan007" target="_blank" rel="noopener" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+    </div>
   </header>
 
   <main class="container">
     <section class="hero-block" id="top">
-      <h1 class="name">Abhigyan Pandya</h1>
+      <h1 class="name name-gradient">Abhigyan Pandya</h1>
       <p class="role">MSBA @ UT Austin</p>
       <p class="tagline">Practical analytics & ML that gets used.</p>
-      <p class="current">Graduate student in Business Analytics at UT Austin.</p>
+      <p class="current">Working at <a class="company-link" href="https://www.ssctech.com/" target="_blank" rel="noopener">SS&C Algorithmics</a> as Quant Research Intern.</p>
       <p class="one-liner">I work at the intersection of data, product, and the last mile—dashboards, apps, and write-ups that make models legible to teams.</p>
       <div class="cta">
-        <a class="btn" href="/projects.html">Portfolio</a>
+        <a class="btn btn-primary" href="/projects.html">Portfolio</a>
         <a class="btn ghost" href="/resume.html">Resume</a>
       </div>
     </section>
 
     <section id="experience">
       <h2>Experience</h2>
-      <div class="timeline">
+      <div class="timeline timeline-left">
         <div class="timeline-line" id="timeline-line" aria-hidden="true"></div>
-        <div class="timeline-item timeline-item-left" data-timeline>
+        <div class="timeline-item" data-timeline>
+          <div class="timeline-track"><span class="timeline-dot"></span></div>
           <div class="timeline-card">
-            <h3>Quant Research Intern</h3>
-            <p class="company">SS&C Algorithmics</p>
-            <p class="dates">January 2026 – Present</p>
+            <div class="timeline-card-header">
+              <div class="timeline-card-title-row">
+                <div class="timeline-logo" aria-hidden="true"></div>
+                <div>
+                  <h3>Quant Research Intern</h3>
+                  <p class="company">SS&C Algorithmics</p>
+                </div>
+                <p class="timeline-dates">January 2026 – Present</p>
+              </div>
+            </div>
             <p class="desc">Improved a multi-agent LLM pipeline processing financial news articles weekly to extract macro shocks and generate industry outlooks.</p>
             <div class="tags">
               <span class="badge">LLM</span>
               <span class="badge">Python</span>
               <span class="badge">Quant</span>
             </div>
+            <div class="timeline-card-details" id="exp-details-1" hidden>
+              <p>Additional context: pipeline ingests news, runs LLM extraction, and produces structured outlooks for internal use.</p>
+            </div>
+            <button type="button" class="timeline-details-toggle" data-details="exp-details-1" aria-expanded="false">Click for details →</button>
           </div>
-          <div class="timeline-dot-wrap"><span class="timeline-dot"></span></div>
         </div>
-        <div class="timeline-item timeline-item-right" data-timeline>
-          <div class="timeline-dot-wrap"><span class="timeline-dot"></span></div>
+        <div class="timeline-item" data-timeline>
+          <div class="timeline-track"><span class="timeline-dot"></span></div>
           <div class="timeline-card">
-            <h3>Technical Co-Founder</h3>
-            <p class="company"><a href="https://www.statme.us/" target="_blank" rel="noopener">StatMe</a></p>
-            <p class="dates">Ongoing</p>
+            <div class="timeline-card-header">
+              <div class="timeline-card-title-row">
+                <div class="timeline-logo" aria-hidden="true"></div>
+                <div>
+                  <h3>Technical Co-Founder</h3>
+                  <p class="company"><a href="https://www.statme.us/" target="_blank" rel="noopener">StatMe</a></p>
+                </div>
+                <p class="timeline-dates">Ongoing</p>
+              </div>
+            </div>
             <p class="desc">Co-building StatMe, a basketball analytics platform. Building product, data pipelines, and analytics to bring NBA-level insights to players and teams.</p>
             <div class="tags">
               <span class="badge">Analytics</span>
               <span class="badge">Product</span>
               <span class="badge">Python</span>
             </div>
+            <div class="timeline-card-details" id="exp-details-2" hidden>
+              <p>Building full-stack product: data ingestion, stat models, and user-facing dashboards.</p>
+            </div>
+            <button type="button" class="timeline-details-toggle" data-details="exp-details-2" aria-expanded="false">Click for details →</button>
           </div>
         </div>
-        <div class="timeline-item timeline-item-left" data-timeline>
+        <div class="timeline-item" data-timeline>
+          <div class="timeline-track"><span class="timeline-dot"></span></div>
           <div class="timeline-card">
-            <h3>Data Science Analyst Intern</h3>
-            <p class="company">Expedia Group</p>
-            <p class="dates">May 2024 – July 2024</p>
+            <div class="timeline-card-header">
+              <div class="timeline-card-title-row">
+                <div class="timeline-logo" aria-hidden="true"></div>
+                <div>
+                  <h3>Data Science Analyst Intern</h3>
+                  <p class="company">Expedia Group</p>
+                </div>
+                <p class="timeline-dates">May 2024 – July 2024</p>
+              </div>
+            </div>
             <p class="desc">Utilized SQL and Python to create data models and identify key insights analyzing customer trends in the Air Analytics business.</p>
             <div class="tags">
               <span class="badge">Python</span>
               <span class="badge">SQL</span>
               <span class="badge">Analytics</span>
             </div>
+            <div class="timeline-card-details" id="exp-details-3" hidden>
+              <p>Focused on Air Analytics: built dashboards and models to surface trends for product and business teams.</p>
+            </div>
+            <button type="button" class="timeline-details-toggle" data-details="exp-details-3" aria-expanded="false">Click for details →</button>
           </div>
-          <div class="timeline-dot-wrap"><span class="timeline-dot"></span></div>
         </div>
       </div>
     </section>
@@ -102,16 +138,20 @@
       <h2>Education</h2>
       <div class="education-list">
         <article class="edu-card">
-          <p class="school">The University of Texas at Austin</p>
-          <p class="dates">June 2025 – May 2026</p>
+          <div class="edu-card-head">
+            <p class="school">The University of Texas at Austin</p>
+            <p class="dates">June 2025 – May 2026</p>
+          </div>
           <p class="degree">M.S. Business Analytics (MSBA)</p>
-          <p class="meta">GPA: 4.0 · Austin, TX</p>
+          <p class="meta"><span class="location-icon" aria-hidden="true"></span> GPA: 4.0 · Austin, TX</p>
         </article>
         <article class="edu-card">
-          <p class="school">The University of Texas at Austin</p>
-          <p class="dates">August 2021 – May 2025</p>
+          <div class="edu-card-head">
+            <p class="school">The University of Texas at Austin</p>
+            <p class="dates">August 2021 – May 2025</p>
+          </div>
           <p class="degree">B.B.A. Management Information Systems, Minor: Finance</p>
-          <p class="meta">GPA: 3.7 · Austin, TX</p>
+          <p class="meta"><span class="location-icon" aria-hidden="true"></span> GPA: 3.7 · Austin, TX</p>
         </article>
       </div>
     </section>
@@ -128,6 +168,8 @@
     </section>
   </main>
 
+  <script src="assets/vendor/three.min.js"></script>
+  <script src="assets/vendor/vanta.net.min.js"></script>
   <script src="assets/index.js"></script>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
