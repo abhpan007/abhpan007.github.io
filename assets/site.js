@@ -1,14 +1,35 @@
 (function(){
-<h3>${r.name}</h3>
-<p>${desc}</p>
-<div class="meta">
-${lang}
-<span>${stars}</span>
-<span>Updated ${relTime(r.updated_at)}</span>
-</div>
-<div style="margin-top:10px; display:flex; gap:6px; flex-wrap:wrap">${topics}</div>
-</a>
-`);
+var CFG = window.SITE_CFG || {};
+var USER = CFG.username || 'abhpan007';
+
+function el(html){
+  var wrap = document.createElement('div');
+  wrap.innerHTML = html.trim();
+  return wrap.firstChild;
+}
+
+function relTime(str){
+  if(!str) return '';
+  var d = new Date(str);
+  var now = new Date();
+  var months = (now.getFullYear()-d.getFullYear())*12 + (now.getMonth()-d.getMonth());
+  if(months < 1) return 'Recently';
+  if(months < 12) return months + ' mo ago';
+  var y = Math.floor(months/12);
+  return y + ' year' + (y>1?'s':'') + ' ago';
+}
+
+function repoCard(r){
+  var desc = (r.description || '').slice(0, 120);
+  if((r.description||'').length > 120) desc += '…';
+  var lang = r.language ? '<span class="lang">' + r.language + '</span>' : '';
+  var stars = r.stargazers_count ? '★ ' + r.stargazers_count : '';
+  var topics = (r.topics || []).slice(0, 5).map(function(t){ return '<span class="badge">' + t + '</span>'; }).join('');
+  return el('<a class="card" href="' + (r.html_url || '#') + '" target="_blank" rel="noopener">' +
+'<h3>'+ (r.name||'') +'</h3>' +
+'<p>'+ (desc||'') +'</p>' +
+'<div class="meta">' + lang + '<span>'+ stars +'</span><span>Updated '+ relTime(r.updated_at) +'</span></div>' +
+'<div style="margin-top:10px; display:flex; gap:6px; flex-wrap:wrap">'+ topics +'</div></a>');
 }
 
 
