@@ -53,10 +53,18 @@
     });
   });
 
-  // Vanta NET background (run after layout so #bg-dynamic has dimensions)
+  // Vanta NET background: init after load + layout so scripts and #bg-dynamic are ready
+  var vantaRetries = 0;
   function initVanta() {
     var el = document.getElementById('bg-dynamic');
-    if (!el || typeof window.VANTA === 'undefined' || typeof window.THREE === 'undefined') return;
+    if (!el) return;
+    if (typeof window.VANTA === 'undefined' || typeof window.THREE === 'undefined') {
+      if (vantaRetries < 15) {
+        vantaRetries += 1;
+        setTimeout(initVanta, 80);
+      }
+      return;
+    }
     var instance = window.VANTA.NET({
       el: el,
       THREE: window.THREE,
@@ -75,20 +83,20 @@
     });
     if (instance) {
       window._vantaInstance = instance;
-      if (typeof instance.resize === 'function') {
-        requestAnimationFrame(function () { instance.resize(); });
-      } else {
-        window.dispatchEvent(new Event('resize'));
-      }
+      requestAnimationFrame(function () {
+        if (typeof instance.resize === 'function') instance.resize();
+      });
     }
   }
   function runVantaAfterLayout() {
     requestAnimationFrame(function () {
-      requestAnimationFrame(initVanta);
+      requestAnimationFrame(function () {
+        setTimeout(initVanta, 80);
+      });
     });
   }
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', runVantaAfterLayout);
+    window.addEventListener('load', runVantaAfterLayout);
   } else {
     runVantaAfterLayout();
   }
